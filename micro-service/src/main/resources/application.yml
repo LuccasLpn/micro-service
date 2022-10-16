@@ -1,0 +1,16 @@
+server:
+  error:
+    include-stacktrace: never
+  servlet:
+    context-path: /api
+  port: '8494'
+spring:
+  rabbitmq:
+    username: Admin
+    password: Admin
+    host: localhost
+    port: 5672
+    queue:
+      order: "queue-order"
+      payment: "queue-payment"
+      shipping: "queue-shipping"
