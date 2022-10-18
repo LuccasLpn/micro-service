@@ -1,0 +1,21 @@
+version: '3'
+services:
+  rabbitmq:
+    container_name: rabbitmq_management
+    environment:
+      - "RABBITMQ_DEFAULT_USER=Admin"
+      - "RABBITMQ_DEFAULT_PASS=Admin"
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  micro-service-db:
+    image: postgres:14.0
+    container_name: micro-service-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=micro-service-db
+      - POSTGRES_USER=micro-service-db
+      - POSTGRES_PASSWORD=micro-service-db
+    ports:
+      - "7071:5432"

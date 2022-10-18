@@ -2,7 +2,7 @@ server:
   error:
     include-stacktrace: never
   servlet:
-    context-path: /api
+    context-path: /producer
   port: '8494'
 spring:
   rabbitmq:

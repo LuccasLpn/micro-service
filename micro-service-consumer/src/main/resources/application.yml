@@ -1,0 +1,16 @@
+server:
+  error:
+    include-stacktrace: never
+  servlet:
+    context-path: /consumer
+  port: '8496'
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:7071/micro-service-db
+    username: micro-service-db
+    password: micro-service-db
+  rabbitmq:
+    username: Admin
+    password: Admin
+    host: localhost
+    port: 5672
