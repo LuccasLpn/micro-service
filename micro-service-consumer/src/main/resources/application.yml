@@ -6,9 +6,15 @@ server:
   port: '8496'
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:7071/micro-service-db
+    url: jdbc:postgresql://localhost:7071/micro_service_db
     username: micro-service-db
     password: micro-service-db
+  jpa:
+    show-sql: 'false'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+    open-in-view: false
   rabbitmq:
     username: Admin
     password: Admin

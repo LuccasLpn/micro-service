@@ -1,5 +1,7 @@
 package com.example.microserviceconsumer.modules.order.entity;
 
+import com.example.microserviceconsumer.modules.converter.ProductConverter;
+import com.example.microserviceconsumer.modules.order.dto.Product;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,6 +21,10 @@ public class Order implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tb_order_seq")
     @SequenceGenerator(name = "tb_order_seq", sequenceName = "tb_order_seq", allocationSize = 1)
     private Long id;
+
+    @Column(name = "product", columnDefinition = "text")
+    @Convert(converter = ProductConverter.class)
+    private Product product;
 
     @Version
     @Column(name = "version")
