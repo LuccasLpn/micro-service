@@ -1,6 +1,6 @@
 package com.example.microserviceconsumer.modules.converter;
 
-import com.example.microserviceconsumer.modules.order.dto.Product;
+import br.com.lib.modules.dto.Product;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 

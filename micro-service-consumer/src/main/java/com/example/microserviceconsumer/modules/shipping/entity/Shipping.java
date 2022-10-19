@@ -1,6 +1,6 @@
 package com.example.microserviceconsumer.modules.shipping.entity;
 
-import com.example.microserviceconsumer.modules.enums.ShippingEnum;
+import br.com.lib.modules.enums.ShippingEnum;
 import com.example.microserviceconsumer.modules.order.entity.Order;
 import lombok.*;
 

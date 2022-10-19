@@ -1,8 +1,8 @@
-package br.com.microserviceproducer.modules.shipping.controller;
+package br.com.microserviceproducer.modules.order;
 
+import br.com.lib.modules.request.OrderRequest;
+import br.com.lib.modules.request.OrderResponse;
 import br.com.microserviceproducer.modules.rabbitmq.producer.RabbitMqProducer;
-import br.com.microserviceproducer.modules.shipping.request.ShippingRequest;
-import br.com.microserviceproducer.modules.shipping.request.ShippingResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = {"/shipping"})
+@RequestMapping(path = {"/order"})
 @RequiredArgsConstructor
-public class ShippingController {
+public class OrderController {
 
     private final RabbitMqProducer rabbitMqProducer;
 
     @PostMapping
-    public ResponseEntity<ShippingResponse> sendQueue(@RequestBody ShippingRequest shippingRequest){
-        ShippingResponse shippingResponse = rabbitMqProducer.sendQueueShipping(shippingRequest);
-        return new ResponseEntity<>(shippingResponse, HttpStatus.OK);
+    public ResponseEntity<OrderResponse> sendQueue(@RequestBody OrderRequest orderRequest){
+        OrderResponse orderResponse = rabbitMqProducer.sendQueueOrder(orderRequest);
+        return new ResponseEntity<>(orderResponse, HttpStatus.OK);
     }
 }

@@ -1,7 +1,7 @@
 package com.example.microserviceconsumer.modules.order.entity;
 
+import br.com.lib.modules.dto.Product;
 import com.example.microserviceconsumer.modules.converter.ProductConverter;
-import com.example.microserviceconsumer.modules.order.dto.Product;
 import lombok.*;
 
 import javax.persistence.*;

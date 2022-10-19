@@ -1,8 +1,8 @@
-package br.com.microserviceproducer.modules.payment.controller;
+package br.com.microserviceproducer.modules.payment;
 
-import br.com.microserviceproducer.modules.payment.request.PaymentResponse;
+import br.com.lib.modules.request.PaymentRequest;
+import br.com.lib.modules.request.PaymentResponse;
 import br.com.microserviceproducer.modules.rabbitmq.producer.RabbitMqProducer;
-import br.com.microserviceproducer.modules.payment.request.PaymentRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

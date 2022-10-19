@@ -1,6 +1,6 @@
 package com.example.microserviceconsumer.modules.payment.entity;
 
-import com.example.microserviceconsumer.modules.enums.PaymentEnum;
+import br.com.lib.modules.enums.PaymentEnum;
 import com.example.microserviceconsumer.modules.order.entity.Order;
 import lombok.*;
 import javax.persistence.*;

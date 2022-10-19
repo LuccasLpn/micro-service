@@ -1,5 +1,6 @@
 package br.com.microserviceproducer.modules.rabbitmq.producer;
 
+import br.com.lib.modules.request.*;
 import br.com.microserviceproducer.modules.order.request.OrderRequest;
 import br.com.microserviceproducer.modules.order.request.OrderResponse;
 import br.com.microserviceproducer.modules.payment.request.PaymentResponse;
